@@ -4,7 +4,7 @@ private:
     Automovil carro;
     string entrega;
     string devolucion;
-    int costo;
+    float costo;
 
 public:
     Reserva(){
@@ -27,7 +27,7 @@ public:
 
     }
 
-    int getCosto(){
+    float getCosto(){
 
     }
 

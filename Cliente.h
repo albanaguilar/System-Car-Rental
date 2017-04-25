@@ -6,25 +6,20 @@ private:
     string sCorreoElectronico;
 
 public:
-    //Constructor default
-    cliente(){
-        sNombre = "Juan Perez";
-        iEdad = 18;
-        iTelefono = 8666303466;
-        sCorreoElectronico = "a00818811@itesm.mx";
-    }
-
-    //Constructor con parametros
-    cliente (string sNombre, int iEdad, int iTelefono, string sCorreoElectronico ){
+    cliente(){  } //Constructor default
+    cliente (string sNombre, int iEdad, int iTelefono, string sCorreoElectronico ){ //Constructor con parametros
         this-> sNombre = sNombre;
         this -> iEdad = iEdad;
         this -> iTelefono = iTelefono;
         this -> sCorreoElectronico = sCorreoElectronico;
     }
-
-    string getNombre(){ this->sNombre = sNombre; }
-    int getEdad(){ this->iEdad = iEdad; }
-    int getTelefono() { this->iTelefono = iTelefono; }
-    string getCorreoElectronico(){ this->sCorreoElectronico = sCorreoElectronico; }
-
+    //Getters
+    string getNombre(){ return this->sNombre; }
+    int getEdad(){ return this->iImag;}
+    int getTelefono() {  }
+    string getCorreoElectronico(){  }
+    //Setters
+    void setNombre( string sNombre ){ this->sNombre = sNombre; }
+    void setEdad( int iEdad ){ this->iEdad = iEdad; }
+    void setNombre( int iTelefono ){ this->iTelefono = iTelefono; }
 };
