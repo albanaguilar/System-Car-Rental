@@ -1,45 +1,45 @@
+#include <string>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
 class Reserva{
 
 private:
+    cliente persona;
     Automovil carro;
-    string entrega;
-    string devolucion;
-    float costo;
+    string sEntrega;
+    string sDevolucion;
+    float fCosto;
 
 public:
-    Reserva(){
-
+    Reserva( ){ }   //Constructor default
+    Reserva(Automovil carro, string sEntrega, string sDevolucion, int fCosto){ //Constructor con parametros
+        this->persona = persona;
+        this->carro = carro;
+        this->sEntrega =sEntrega;
+        this->sDevolucion = sDevolucion;
+        this->fCosto = fCosto;
     }
 
-    Reserva(Automovil carro, string entrega, string devolucion, int costo){
+    //Getters
+    string getPersona( ){ return this->persona; }
+    string getCarro( ){ return this->carro; }
+    string getEntrega( ){ return this->sEntrega; }
+    string getDevolucion( ){ return this->sDevolucion; }
+    float getCosto( ){ return this->fCosto; }
+
+    //Setters
+    void setPersona( cliente persona ){ this->persona = persona; }
+    void setCarro( Automovil carro ){ this->carro = carro; }
+    void setEntrega( string sEntrega ){ this->sEntrega = sEntrega; }
+    void setDevolucion( string sDevolucion ){ this->sDevolucion = sDevolucion; }
+    void setCosto( float fCosto ){ this->fCosto = fCosto; }
+
+    //No se de costo
+    void calcularCosto( Automovil carro ){
 
     }
-
-    string getCarro(){
-
-    }
-
-    string getEntrega(){
-
-    }
-
-    string getDevolucion(){
-
-    }
-
-    float getCosto(){
-
-    }
-
-    void setCarro(){
-    }
-
-    void setEntrega(){}
-
-    void setDevolucion(){}
-
-    //No set de costo
-    void calcularCosto(Automovil){}
-
 
 };
