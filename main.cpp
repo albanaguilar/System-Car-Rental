@@ -20,15 +20,16 @@ int main( ){
 
     ifstream entradaArchivoReserva;
     entradaArchivoReserva.open("Carros.txt");
-   // istream archivoSalida;
-   // archivoSalida.open( "Carros.csv" );
 
     while ( !entradaArchivoReserva.eof() ){
         getline(entradaArchivoReserva, sLinea );
         arregloString[iCont] = sLinea;
         iCont = iCont + 1;
+        cout << sLinea << endl;
     }
 
+    cout << endl;
+    cout << endl;
     cout << "Teclea el numero de opcion: " << endl;
     cout << "   1.- Reservar un vehiculo" << endl;
     cout << "   2.- Consultar reservas" << endl;
