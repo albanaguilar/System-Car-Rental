@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 
+#include "Reserva.h"
+#include "Automovil.h"
 using namespace std;
 
 class cliente{

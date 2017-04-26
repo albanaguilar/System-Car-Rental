@@ -20,6 +20,8 @@ int main( ){
     string arregloString[20];
 
     istream entradaArchivoReserva;
+    istream archivoSalida;
+    archivoSalida.open( "Carros.csv" );
 
     while ( !entradaArchivoReserva.eof() ){
         getline(entradaArchivoReserva, sLinea );
