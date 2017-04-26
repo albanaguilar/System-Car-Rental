@@ -1,0 +1,20 @@
+Volkswagen Sedan Auto Automatico Cancun 5 693
+Chevrolet Matiz Auto Manual Monterrey 4 577
+Volkswagen Gol Auto Manual Merida 4 627
+Chevrolet Spark	Auto Manual LosCabos 4 627
+Chevrolet Sonic Auto Manual PlayadelCarmen 5 858
+Kia RioHatchback Auto Manual Cancun 5 858
+Dodge Attitude Auto Automatico CiudaddeMexico 5	907
+Volkswagen Jetta Auto Manual Monterrey 5 1056
+Volkswagen Jetta Auto Automatico Cancun	5 1089
+Hyundai	Sonata Auto Automatico Los Cabos 5 1155
+Mitsubishi Lancer Auto Automatico PlayadelCarmen 5 1089
+Chevrolet Malibu Auto Automatico Cancun 5 1155
+Volkswagen Passat Auto	Automatico Monterrey 5 1155
+Nissan Sentra Auto Manual CiudaddeMexico 5 990
+Fiat Cabrio Auto Manual PlayadelCarmen 4 1237
+Audi Q3 Camioneta Automatico Monterrey 5 1485
+Volkswagen Tiguan Camioneta Automatico Cancun 5 1485
+BMW X1 Camioneta Automatico LosCabos 5 1485
+Jeep WranglerSport Camioneta Manual Cancun 4 1155
+Jeep UnlimitedSahara Camioneta Automatico PlayadelCarmen 4 1237

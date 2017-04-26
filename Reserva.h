@@ -2,8 +2,8 @@
 #include <iostream>
 #include <fstream>
 
-#include "Cliente.h"
 #include "Automovil.h"
+#include "Cliente.h"
 using namespace std;
 
 class Reserva{
@@ -26,8 +26,8 @@ public:
     }
 
     //Getters
-    string getPersona( ){ return this->persona; }
-    string getCarro( ){ return this->carro; }
+    cliente getPersona( ){ return this->persona; }
+    Automovil getCarro( ){ return this->carro; }
     string getEntrega( ){ return this->sEntrega; }
     string getDevolucion( ){ return this->sDevolucion; }
     float getCosto( ){ return this->fCosto; }

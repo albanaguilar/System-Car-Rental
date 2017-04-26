@@ -3,9 +3,8 @@
 #include <fstream>
 
 using namespace std;
-#include "Automovil.h"
+
 #include "Reserva.h"
-#include "Cliente.h"
 
 int main( ){
     cliente persona;
@@ -19,9 +18,10 @@ int main( ){
     string sNombre, sCorreoElectronico, sLinea;
     string arregloString[20];
 
-    istream entradaArchivoReserva;
-    istream archivoSalida;
-    archivoSalida.open( "Carros.csv" );
+    ifstream entradaArchivoReserva;
+    entradaArchivoReserva.open("Carros.txt");
+   // istream archivoSalida;
+   // archivoSalida.open( "Carros.csv" );
 
     while ( !entradaArchivoReserva.eof() ){
         getline(entradaArchivoReserva, sLinea );
@@ -57,7 +57,7 @@ int main( ){
         int numAuto;
         cout << "Seleccione el numero del auto que guste: " <<endl;
         cin >>numAuto;
-        if ( )
+        //if ( )
     }
 
 
