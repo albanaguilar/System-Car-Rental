@@ -11,8 +11,7 @@ class Reserva{
 private:
     cliente persona;
     Automovil carro;
-    string sEntrega;
-    string sDevolucion;
+    int iDiasRenta;
     float fCosto;
 
 public:

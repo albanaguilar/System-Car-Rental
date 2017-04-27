@@ -7,7 +7,7 @@ Kia RioHatchback Auto Manual Cancun 5 858
 Dodge Attitude Auto Automatico CiudaddeMexico 5	907
 Volkswagen Jetta Auto Manual Monterrey 5 1056
 Volkswagen Jetta Auto Automatico Cancun	5 1089
-Hyundai	Sonata Auto Automatico Los Cabos 5 1155
+Hyundai	Sonata Auto Automatico LosCabos 5 1155
 Mitsubishi Lancer Auto Automatico PlayadelCarmen 5 1089
 Chevrolet Malibu Auto Automatico Cancun 5 1155
 Volkswagen Passat Auto	Automatico Monterrey 5 1155
