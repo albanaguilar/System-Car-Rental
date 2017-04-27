@@ -5,84 +5,44 @@
 using namespace std;
 
 #include "Reserva.h"
+#include "Automovil.h"
 
 int main( ){
+
     cliente persona;
     Reserva reservacion;
     cliente arregloPersonas[20];
     Reserva arregloReservaciones[20];
-    //Automovil aAuto[20];
+    Automovil aAuto[200];
 
     int iContador = 0, iOpcion, iEdad, iTelefono, iCont = 0, resrvacionesContador = 0;
 
-    string sNombre, sCorreoElectronico, sLinea;
+    string sNombre, sCorreoElectronico, sLinea, sMarca;
     string arregloString[20];
 
     ifstream entradaArchivoReserva;
-    entradaArchivoReserva.open("Carros.txt");
 
-    cout << endl;
-    while ( !entradaArchivoReserva.eof() ){
-        getline(entradaArchivoReserva, sLinea );
-        arregloString[iCont] = sLinea;
-        iCont = iCont + 1;
-        cout << sLinea << endl;
-    }
+    entradaArchivoReserva.open("Carros1.txt");
 
-    cout << endl;
-    cout << endl;
-    cout << "Menu" << endl;
-    cout << "   1.- Reservar un vehiculo" << endl;
-    cout << "   2.- Consultar reservas" << endl;
-    cout << "Teclea el numero de opcion: ";
-    cin >> iOpcion;
-    cout << endl;
+    for(int i=0; !entradaArchivoReserva.eof(); i++)
+    {
+        //Guardar marca en el arreglo de obetos
+        entradaArchivoReserva >> sMarca;
+        aAuto[i].setMarca(sMarca);
+       cout << aAuto[i].getMarca() << " ";
 
-    cin.ignore();
-    if ( iOpcion == 1){
-        cout << "Provee los datos siguientes: " << endl;
-        cout << "   Nombre: ";
-        getline(cin, sNombre);
-        cout << "   Edad: ";
-        cin >> iEdad;
-        cout << "   Telefono: ";
-        cin >> iTelefono;
-        cin.ignore();
-        cout << "   Correo electronico: ";
-        cin >> sCorreoElectronico;
+       entradaArchivoReserva >> sMarca;
+       aAuto[i].setModelo(sMarca);
+       cout << aAuto[i].getModelo() << " ";
 
-        arregloPersonas[iContador].setNombre( sNombre);
-        arregloPersonas[iContador].setEdad(iEdad);
-        arregloPersonas[iContador].setTelefono(iTelefono);
-        arregloPersonas[iContador].setCorreoElectronico(sCorreoElectronico);
+       //Guarda la categoria
 
-        cout << "Marca " << "Modelo " << "Categoria " <<"Transmicion " << "Ubicacion " << "Capacidad " << "Costo de renta" << endl;
-        for ( int iA = 1; iA < 20; iA++ ){
-            cout << iA << ".- " << arregloString[iA] << endl;
-        }
+       entradaArchivoReserva >> sMarca;
+       aAuto[i].setCategoria(sMarca);
+       cout << aAuto[i].getCategoria() << endl;
+    }//termina for
 
-        cin.ignore();
-        int numAuto;
-        cout << "Seleccione el numero del auto que guste: ";
-        cin >>numAuto;
-
-        int sA = arregloString[numAuto];
-        while ( sA != ' ' ){
-
-        }
-        resrvacionesContador++;
-
-        cout << "!Se ha realizado su reserva exitosamente!" << endl;
-        //iContador = iContador + 1;
-
-    }
-    else if (iOpcion == 2){
-        cout <<"Reservas" << endl;
-        for (int iA = 0; iA < iContador; iA++){
-            cout << ( iA + 1 ) << ".- " << arregloReservaciones[resrvacionesContador] << endl;
-        }
-    }
-
+    entradaArchivoReserva.close();
 
     return 0;
 }

@@ -9,6 +9,7 @@ using namespace std;
 
 class Automovil {
 
+    private:
     string sMarca;
     string sModelo;
     string sCategoria;
@@ -29,6 +30,7 @@ public:
     string getCategoria();
     int getCapacidad();
     float getPrecioDiario();
+    void print();
 
     void setMarca(string sMarca);
     void setModelo(string sModelo);
@@ -72,6 +74,10 @@ void Automovil::setPrecioDiario(float fPrecioDiario ){ this->fPrecioDiario = fPr
 
 void Automovil::renta( ){
 
+}
+
+void Automovil:: print(){
+    cout << sMarca << endl;
 }
 
 #endif /* Automovil_h */
