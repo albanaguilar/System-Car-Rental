@@ -7,7 +7,18 @@ using namespace std;
 #include "Reserva.h"
 #include "Automovil.h"
 
-void mostrarAutos(int iContador = 0, int iOpcion = 1,Automovil aAuto, int iEdad,int iCont = 0,int iCapacidad, int contadorReservas = 0, string sNombre,string sCorreoElectronico,string sLinea, string sMarca,string sModelo,string sCategoria,string sTransmision,string sUbicacion){
+void desplegar( Automovil &aAuto[] ){
+    for (int iA = 0; iA < 20 iA++ ){
+        cout << aAuto[i].getMarca() << " " << aAuto[i].getModelo() << " " << aAuto[i].getCategoria() << " "
+        << aAuto[i].getTransmision() << " " << aAuto[i].getUbicacion() << " "
+        << aAuto[i].getCapacidad() << " " << aAuto[i].getPrecioDiario() << endl;
+    }
+}
+
+void guardar(Automovil aAuto[],float fPrecioDiario, int iCapacidad, string sNombre,string sCorreoElectronico,string sLinea, string sMarca,string sModelo,string sCategoria,string sTransmision,string sUbicacion){
+ ifstream entradaArchivoReserva;
+
+ entradaArchivoReserva.open("Carros1.txt");
  for(int i=0; !entradaArchivoReserva.eof(); i++)
     {
         //getline(entradaArchivoReserva, sLinea)
@@ -15,34 +26,34 @@ void mostrarAutos(int iContador = 0, int iOpcion = 1,Automovil aAuto, int iEdad,
         cout << i <<".- ";
         entradaArchivoReserva >> sMarca;
         aAuto[i].setMarca(sMarca);
-       cout << aAuto[i].getMarca() << " ";
+       //cout << aAuto[i].getMarca() << " ";
 
        entradaArchivoReserva >> sModelo;
        aAuto[i].setModelo(sModelo);
-       cout << aAuto[i].getModelo() << " ";
+       //cout << aAuto[i].getModelo() << " ";
 
 
        entradaArchivoReserva >> sCategoria;
        aAuto[i].setCategoria(sCategoria);
-       cout << aAuto[i].getCategoria() << " ";
+       //cout << aAuto[i].getCategoria() << " ";
 
        entradaArchivoReserva >> sTransmision;
         aAuto[i].setTransmision(sTransmision);
-       cout << aAuto[i].getTransmision() << " ";
+       //cout << aAuto[i].getTransmision() << " ";
 
        entradaArchivoReserva >> sUbicacion;
         aAuto[i].setUbicacion(sUbicacion);
-       cout << aAuto[i].getUbicacion() << " ";
+       //cout << aAuto[i].getUbicacion() << " ";
 
        entradaArchivoReserva >> iCapacidad;
         aAuto[i].setCapacidad(iCapacidad);
-       cout << aAuto[i].getCapacidad() << " ";
+       //cout << aAuto[i].getCapacidad() << " ";
 
        entradaArchivoReserva >> fPrecioDiario;
         aAuto[i].setPrecioDiario(fPrecioDiario);
-       cout << aAuto[i].getPrecioDiario() << endl;
+       //cout << aAuto[i].getPrecioDiario() << endl;
     }//termina for
-}
+
 
     entradaArchivoReserva.close();
 }
@@ -54,9 +65,6 @@ int main( ){
     cliente arregloPersonas[20];
     Reserva arregloReservaciones[20];
     Automovil aAuto[200];
-    ifstream entradaArchivoReserva;
-
-    entradaArchivoReserva.open("Carros1.txt");
 
     int iContador = 0, iOpcion = 1, iEdad, iCont = 0, iCapacidad, contadorReservas = 0;
     string iTelefono;
@@ -101,8 +109,8 @@ int main( ){
         cout << "Los autos son los siguientes: " <<endl;
 //imprimir carros
 
-        mostrarAutos();
-
+        guardar(aAuto, fPrecioDiario, iCapacidad, sNombre, sCorreoElectronico,sLinea,sMarca, sModelo,sCategoria, sTransmision,sUbicacion);
+        desplegar( &aAuto );
 
         cout << endl;
         cin.ignore();
@@ -123,7 +131,6 @@ int main( ){
         //cout << arregloReservaciones[iCont] << endl;
         //iCont++;*/
 
-        entradaArchivoReserva.close();
         ofstream archivoSalida;
         string sH;
         archivoSalida.open("hola.txt");
