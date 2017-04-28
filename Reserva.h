@@ -16,31 +16,28 @@ private:
 
 public:
     Reserva( ){ }   //Constructor default
-    Reserva(Automovil carro, string sEntrega, string sDevolucion, int fCosto ){ //Constructor con parametros
+    Reserva(Automovil carro, int iDiasRenta, int fCosto ){ //Constructor con parametros
         this->persona = persona;
         this->carro = carro;
-        this->sEntrega =sEntrega;
-        this->sDevolucion = sDevolucion;
+        this->iDiasRenta = iDiasRenta;
         this->fCosto = fCosto;
     }
 
     //Getters
     cliente getPersona( ){ return this->persona; }
     Automovil getCarro( ){ return this->carro; }
-    string getEntrega( ){ return this->sEntrega; }
-    string getDevolucion( ){ return this->sDevolucion; }
+    int getDiasRenta( ){ return this->iDiasRenta; }
     float getCosto( ){ return this->fCosto; }
 
     //Setters
     void setPersona( cliente persona ){ this->persona = persona; }
     void setCarro( Automovil carro ){ this->carro = carro; }
-    void setEntrega( string sEntrega ){ this->sEntrega = sEntrega; }
-    void setDevolucion( string sDevolucion ){ this->sDevolucion = sDevolucion; }
+    void setDiasRenta( int iDiasRenta ){ this->iDiasRenta = iDiasRenta; }
     void setCosto( float fCosto ){ this->fCosto = fCosto; }
 
     //No se de costo
-    void calcularCosto( Automovil carro ){
-
+    void calcularCosto( float fCosto, int iDiasRenta ){
+        cout << "El precio de renta es de: $" << fCosto * iDiasRenta << endl;
     }
 
 };
