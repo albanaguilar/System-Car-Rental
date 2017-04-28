@@ -7,8 +7,8 @@ using namespace std;
 #include "Reserva.h"
 #include "Automovil.h"
 
-void desplegar( Automovil &aAuto[] ){
-    for (int iA = 0; iA < 20 iA++ ){
+void desplegar( Automovil aAuto[] , int &i){
+    for (int i = 0; i < 20 ; i++ ){
         cout << aAuto[i].getMarca() << " " << aAuto[i].getModelo() << " " << aAuto[i].getCategoria() << " "
         << aAuto[i].getTransmision() << " " << aAuto[i].getUbicacion() << " "
         << aAuto[i].getCapacidad() << " " << aAuto[i].getPrecioDiario() << endl;
@@ -109,8 +109,9 @@ int main( ){
         cout << "Los autos son los siguientes: " <<endl;
 //imprimir carros
 
+        int i = 0;
         guardar(aAuto, fPrecioDiario, iCapacidad, sNombre, sCorreoElectronico,sLinea,sMarca, sModelo,sCategoria, sTransmision,sUbicacion);
-        desplegar( &aAuto );
+        desplegar( aAuto , i);
 
         cout << endl;
         cin.ignore();
@@ -133,18 +134,16 @@ int main( ){
 
         ofstream archivoSalida;
         string sH;
+        i = numAuto;
         archivoSalida.open("hola.txt");
         for (int iA = 0; iA <= iCont; iA++ ){
             archivoSalida << iA <<".- " << arregloPersonas[iA].getNombre() << " " <<
             arregloPersonas[iA].getEdad() << " " <<
             arregloPersonas[iA].getTelefono() << " " <<
-            arregloPersonas[iA].getCorreoElectronico( ) << '\n' << aAuto[numAuto].getMarca() << " "
-            << aAuto[numAuto].getModelo() ;/*<< " " << aAuto[iA].getCategoria() << " "
-            << aAuto[iA].getTransmision() << " " << aAuto[iA].getUbicacion() << " "
-            << aAuto[iA].getCapacidad() << " " << aAuto[iA].getPrecioDiario() << '\n'
+            arregloPersonas[iA].getCorreoElectronico( ) << '\n' <<  desplegar( aAuto[] , &i)
             << "Los dias de renta son: " << dias << '\n'
             << arregloReservaciones[iA].calcularCosto(aAuto[numAuto].getPrecioDiario(), dias) << '\n';
-        */}
+        }
         archivoSalida.close();
     }
     else if (iOpcion == 2){
