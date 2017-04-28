@@ -36,8 +36,8 @@ public:
     void setCosto( float fCosto ){ this->fCosto = fCosto; }
 
     //No se de costo
-    void calcularCosto( float fCosto, int iDiasRenta ){
+    /*int calcularCosto( float fCosto, int iDiasRenta ){
         cout << "El precio de renta es de: $" << fCosto * iDiasRenta << endl;
-    }
+    }*/
 
 };
